@@ -1,4 +1,4 @@
-const NFT_COL = [];
+const NFT_COLLECT = [];
 
 function mintNFT(name, gender, occupation) {
     const NFT = {
@@ -6,25 +6,27 @@ function mintNFT(name, gender, occupation) {
         gender: gender,
         occupation: occupation
     };
-    NFT_COL.push(NFT);
+    NFT_COLLECT.push(NFT);
     console.log("Minted " + name);
 }
 
 //Listing Nft
 function listNFTs() {
-    for (let i = 0; i < NFT_COL.length; i++) {
-    	console.log("\n----------------------------------------------------------------")
-        console.log("\nID: \t\t\t" + (i + 1));
-        console.log("Name: \t\t\t" + NFT_COL[i].name);
-        console.log("Gender: \t\t" + NFT_COL[i].gender);
-        console.log("Occupation: \t\t" + NFT_COL[i].occupation);
-    	console.log("----------------------------------------------------------------")
+    for (let i = 0; i < NFT_COLLECT.length; i++) {
+    	console.log("\n|-------------------------------------------------")
+        console.log("|ID: \t\t\t" + (i + 1));
+        console.log("|Name: \t\t\t" + NFT_COLLECT[i].name);
+        console.log("|Gender: \t\t" + NFT_COLLECT[i].gender);
+        console.log("|Occupation: \t\t" + NFT_COLLECT[i].occupation);
+    	console.log("--------------------------------------------------")
     }
 }
 
-//Total number of NFT on NFT_COL Currently
+//Total number of NFT on NFT_COLLECT Currently
 function getTotalSupply() {
-    console.log("\nTotal :" + NFT_COL.length);
+    console.log("\nTotal :" + NFT_COLLECT.length);
+    console.log("\n");
+
 }
 
 
